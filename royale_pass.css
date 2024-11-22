@@ -1,0 +1,118 @@
+/* Reset default styles */
+* {
+    background: url('images/dark\ bg.jpg') no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 20px 50px;
+    color: #FFD700; /* Yellow color for the title */
+}
+
+.header .logo img {
+    width: 150px; /* Adjust this size based on your logo */
+    height: auto;
+}
+
+.header .title h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Royale Pass Section */
+.royale-pass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider-item p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover effect on buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .slider-item p {
+        font-size: 16px;
+    }
+
+    .header .title h1 {
+        font-size: 28px;
+    }
+}

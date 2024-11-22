@@ -1,0 +1,423 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #141e30; /* Fallback for gradient animation */
+}
+
+/* Animated gradient background */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c, #141e30, #283c86);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Form container with fade-in effect */
+.form-container {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form styling */
+form {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Animated heading */
+.animated-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: textFadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes textFadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Input fields styling */
+form input[type="email"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #ffc400;
+    box-shadow: 0 0 5px #ffd000;
+}
+
+form input[type="submit"] {
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #ffd900;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Links */
+.extra-links a {
+    color: #ffb300;
+    text-decoration: none;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+ /* General body styling */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #141e30; /* Fallback color */
+}
+
+/* Flight Animation */
+.flight {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    width: 150px;
+    transform: translateY(-50%);
+    animation: flyAcross 10s linear infinite;
+    z-index: 1;
+}
+
+/* Explosion Effect */
+.explosion {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: url('https://cdn.pixabay.com/photo/2018/07/15/22/21/explosion-3530056_960_720.png') no-repeat center/contain;
+    animation: explosionEffect 0.5s steps(6) forwards;
+    z-index: 2;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -200px;
+    }
+    50% {
+        left: 50%;
+    }
+    51% {
+        left: 50%;
+        transform: translateY(-50%) rotate(15deg);
+    }
+    100% {
+        left: 120%;
+        transform: translateY(-50%) rotate(30deg);
+    }
+}
+
+@keyframes explosionEffect {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* PUBG-themed text styling */
+.title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: #ffcc00;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+/* Music Controls */
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.music-controls button {
+    background: linear-gradient(90deg, #ff4500, #ff6347);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.9);
+}
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #000; /* Fallback */
+}
+
+/* New Animated Background */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/login.jpg') no-repeat center center fixed; /* New background */
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Flight Animation */
+.flight {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    width: 150px;
+    transform: translateY(-50%);
+    animation: flyAcross 10s linear infinite;
+    z-index: 1;
+}
+
+/* Explosion Effect */
+.explosion {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: url('https://cdn.pixabay.com/photo/2018/07/15/22/21/explosion-3530056_960_720.png') no-repeat center/contain;
+    animation: explosionEffect 0.5s steps(6) forwards;
+    z-index: 2;
+}
+
+/* Side Images (Left and Right) */
+/* Side Images (Left and Right) */
+/* Side Images (Left and Right) */
+.side-image {
+    position: fixed; /* Fixed position so they stay on the screen edges */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the images */
+    z-index: 10; /* Ensure they appear above other elements */
+}
+
+.left-image {
+    left: -0; /* Reduce the margin to bring it closer to the border */
+}
+
+.right-image {
+    right: 10px; /* Right image stays as it is */
+}
+
+.side-image img {
+    max-width: 200px; /* Adjust the size of the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Animation for Flying Objects */
+@keyframes flyAcross {
+    0% {
+        left: -200px;
+    }
+    50% {
+        left: 50%;
+    }
+    51% {
+        left: 50%;
+        transform: translateY(-50%) rotate(15deg);
+    }
+    100% {
+        left: 120%;
+        transform: translateY(-50%) rotate(30deg);
+    }
+}
+
+@keyframes explosionEffect {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* Music Controls */
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.music-controls button {
+    background: linear-gradient(90deg, #ff4500, #ff6347);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.9);
+}
+
+/* Audio Player Styling */
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Play/Pause Button Styling */
+.audio-player button {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.audio-player button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Volume Slider Styling */
+.audio-player input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+    background: #ddd;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.audio-player input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ffcc00;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.audio-player input[type="range"]::-webkit-slider-thumb:hover {
+    background: #ffd700;
+}
+
+.audio-player input[type="range"]:hover {
+    background: #ccc;
+}

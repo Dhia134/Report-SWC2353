@@ -1,0 +1,59 @@
+/* Container for the logout button */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/login.jpg') no-repeat center center fixed; /* Use your background image */
+    background-size: cover;
+}
+
+/* Logout button styling */
+.logout-button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Stylish gradient */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Hover effect with glow */
+.logout-button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.5); /* Glow effect */
+}
+
+/* Focus effect */
+.logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 75, 43, 0.7);
+}
+
+/* Button inner glow effect */
+.logout-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    opacity: 0;
+    border-radius: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.logout-button:hover:after {
+    opacity: 1;
+}

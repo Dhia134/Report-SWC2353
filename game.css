@@ -1,0 +1,144 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: url('images/dark\ bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.brand-assets button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.brand-assets button:hover {
+    background-color: #FFA500;
+}
+
+/* Main Content Section */
+main {
+    padding: 40px 20px;
+}
+
+.game-description p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.game-description p:first-of-type {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 30px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    display: block;
+}
+
+.related-videos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.video-thumbnail {
+    margin: 10px;
+    text-align: center;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.video-thumbnail a {
+    display: block;
+    margin-top: 10px;
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.video-thumbnail a:hover {
+    color: #FFA500;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.scroll-indicator p {
+    font-size: 18px;
+    color: #FFD700;
+}
+
+/* Scroll Animation */
+.scroll-indicator {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .game-description p {
+        font-size: 16px;
+    }
+
+    .brand-assets button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
